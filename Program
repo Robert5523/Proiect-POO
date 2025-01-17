@@ -1,0 +1,36 @@
+namespace ConsoleApp17;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+        Residences house = new Residences(70, "Aleea Studentilor", 50, 3, "House");
+        house.View(house);
+
+        Console.WriteLine("-----------------");
+
+        Residences apartment = new Residences(13, "Bulevardul Studentilor", 63, 2, "Apartment");
+        apartment.View(apartment);
+
+        apartment.Address = "Central Park";
+        Console.WriteLine("Apartment address was modified in " + apartment.Address + "\n");
+        
+        Console.WriteLine("-----------------");
+
+        Rented residence = new Rented(70, "Robert", 5040615180014, 350, 300);
+        residence.View(residence);
+        residence.Fee = 300;
+        Console.WriteLine("Residence free was modified in " + residence.Fee + "\n");
+
+        residence.ViewRevenue(10, residence.Fee);
+
+        Console.WriteLine("-----------------");
+
+        Rented residence1 = new Rented(90, "Andrei", 6031615180015, 500, 250);
+        residence.View(residence1);
+        residence.Fee = 500;
+
+        residence.ViewRevenue(10, residence.Fee);
+    }
+}
