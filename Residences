@@ -1,0 +1,64 @@
+namespace ConsoleApp17
+{
+    public class Residences
+    {
+        public Residences(int identifier,
+                          string address,
+                          int area,
+                          int parkingLots,
+                          string type)
+        {
+            _identifier = identifier;
+            _address = address;
+            _area = area;
+            _parkingLots = parkingLots;
+            _type = type;
+        }
+
+        private int _identifier;
+        private string _address;
+        private int _area;
+        private int _parkingLots;
+        private string _type;
+        public int Identifier
+        {
+            get { return _identifier; }
+            set { _identifier = value; }
+        }
+
+        public string Address
+        {
+            get { return _address; }
+            set { _address = value; }
+        }
+
+        public int Area
+        {
+            get { return _area; }
+            set { _area = value; }
+        }
+
+        public int ParkingLots
+        {
+            get { return _parkingLots; }
+            set { _parkingLots = value; }
+        }
+
+        public string Type
+        {
+            get { return _type; }
+            set { _type = value; }
+        }
+
+
+        public void View(Residences residence)
+        {
+            Console.WriteLine("Residence details: \n");
+            Console.WriteLine("Type: " + residence.Type + "\n");
+            Console.WriteLine("Identifier: " + residence.Identifier + "\n");
+            Console.WriteLine("Address: " + residence.Address + "\n");
+            Console.WriteLine("Area: " + residence.Area.ToString() + "\n");
+            Console.WriteLine("Parking Lots: " + residence.ParkingLots.ToString() + "\n");
+        }
+    }
+}
