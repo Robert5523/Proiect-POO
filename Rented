@@ -1,0 +1,70 @@
+namespace ConsoleApp17
+{
+    public class Rented
+    {
+        public Rented(int identifier,
+                      string renterName,
+                      long cnp,
+                      int fee,
+                      int warranty)
+        {
+            _identifier = identifier;
+            _fee = fee;
+            _warranty = warranty;
+            _cnp = cnp;
+            _renterName = renterName;
+        }
+
+        private int _identifier;
+        private int _fee;
+        private int _warranty;
+        private long _cnp;
+        private string _renterName;
+
+        public int Identifier
+        {
+            get { return _identifier; }
+            set { _identifier = value; }
+        }
+
+        public int Fee
+        {
+            get { return _fee; }
+            set { _fee = value; }
+        }
+
+        public int Warranty
+        {
+            get { return _warranty; }
+            set { _warranty = value;}
+        }
+
+        public long CNP
+        {
+            get { return _cnp; }
+            set { _cnp = value;}    
+        }
+
+        public string RenterName
+        {
+            get { return _renterName; }
+            set { _renterName = value; }
+        }
+
+        public void View(Rented rentedResidence)
+        {
+            Console.WriteLine("Rented residence details: \n");
+            Console.WriteLine("Identifier: " + rentedResidence.Identifier + "\n");
+            Console.WriteLine("Fee: " + rentedResidence.Fee.ToString() + "\n");
+            Console.WriteLine("Warranty: " + rentedResidence.Warranty.ToString() + "\n");
+            Console.WriteLine("CNP: " + rentedResidence.CNP.ToString() + "\n");
+            Console.WriteLine("Name: " + rentedResidence.RenterName + "\n");
+        }
+
+        public void ViewRevenue(int months, int fee)
+        {
+            int revenueGained = months * fee;
+            Console.WriteLine("Revenue gained in " + months.ToString() + " months with fee " + fee.ToString() + " is: " + revenueGained.ToString()) ;
+        }
+    }
+}
